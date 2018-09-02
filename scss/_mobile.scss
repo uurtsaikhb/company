@@ -1,0 +1,25 @@
+@include mediaExtraLarge {
+}
+
+@include mediaLarge {
+}
+
+@include mediaMedium {
+    .header {
+        .menu {
+            display: none;
+        }
+    }
+}
+
+@include mediaSmall {
+    #home {
+        .home-left {
+            margin-bottom: 40px;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}

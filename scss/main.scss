@@ -1,0 +1,220 @@
+@import 'config';
+
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif !important;
+    font-weight: 300 !important;
+
+    i {
+        font-family: 'Font Awesome 5 Brands' !important;
+    }
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    color: $primary-color !important;
+}
+
+.header {
+    display: flex;
+    padding: 0.6rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background: $lightgray;
+
+    .branding {
+        flex: 1;
+
+        h3 {
+            margin: 0;
+        }
+    }
+
+    .menu {
+        flex: 2;
+        display: flex;
+        justify-content: flex-end;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            li {
+                display: inline-block;
+                margin-right: 1rem;
+
+                a {
+                    color: $primary-color;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#home {
+    height: 100vh;
+    background: $lightgray;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+    .home-left,
+    .home-right {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-right {
+        img {
+            max-width: 80%;
+        }
+    }
+
+    .home-title {
+    }
+}
+
+#tech {
+    padding: 70px 0 50px 0;
+    text-align: center;
+
+    .tech-intro {
+        margin-bottom: 50px;
+    }
+
+    .tech-item {
+        margin: 35px 0;
+    }
+
+    .tech-images {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        img {
+            height: 60px;
+            margin: 5px;
+            filter: grayscale(100%);
+            @include easeOut;
+
+            &:hover {
+                filter: none;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+#projects {
+    padding: 100px 0;
+    text-align: center;
+    background: $lightgray;
+
+    .project-intro {
+        margin-bottom: 50px;
+    }
+
+    .project-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .project-item {
+            flex: 1;
+            margin: 2px;
+            background: white;
+            border-radius: 2px;
+            padding: 1.5rem;
+            min-width: 240px;
+            min-height: 300px;
+            position: relative;
+
+            h4 {
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 0.9rem;
+                text-align: left;
+            }
+
+            .read-more {
+                position: absolute;
+                bottom: 1.5rem;
+                left: 1.5rem;
+                font-size: 0.7rem;
+                color: $primary-color;
+                border: 1px solid $primary-color;
+                padding: 3px 6px;
+                border-radius: 4px;
+                flex: 1;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+#team {
+    padding: 100px 0;
+    text-align: center;
+
+    .team-into {
+        margin-bottom: 70px;
+    }
+
+    .members {
+        display: flex;
+        flex-wrap: wrap;
+
+        .member {
+            flex: 1;
+            padding: 1.5rem 1rem;
+            margin: 2px;
+            border-radius: 2px;
+            display: flex;
+            flex-direction: column;
+            min-height: 430px;
+            justify-content: space-between;
+            align-items: center;
+            background: $lightgray;
+
+            .name {
+                font-size: 20px;
+                color: darken($primary-color, 50);
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .icons {
+                a {
+                    color: $primary-color;
+                }
+                i {
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}
+
+@import 'mobile';

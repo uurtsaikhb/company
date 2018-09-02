@@ -1,0 +1,16 @@
+{
+    "name": "companyweb",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "homepage": "https://uurtsaikhb.github.io/company",
+    "scripts": {
+        "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    },
+    "author": "Uurtsaikh Batbileg",
+    "license": "ISC",
+    "devDependencies": {
+        "gh-pages": "^1.2.0",
+        "gulp-sass": "^4.0.1"
+    }
+}
