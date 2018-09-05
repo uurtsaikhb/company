@@ -15,6 +15,10 @@ body {
     margin: 0;
     height: 100%;
     color: $primary-color !important;
+
+    &.modal-open {
+        overflow: hidden;
+    }
 }
 header {
     &.shadow {
@@ -87,6 +91,52 @@ header {
             background: $primary-color;
             display: block;
             margin: 2px;
+        }
+    }
+}
+
+#navbar-modal {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(14, 14, 14, 0.907);
+    position: fixed;
+    z-index: 4;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: none;
+
+    &.open {
+        display: flex;
+    }
+
+    #close-btn {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        color: white;
+        padding: 0 0.4rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    ul {
+        list-style: none;
+        width: 100%;
+        padding: 0;
+
+        li {
+            text-align: center;
+            margin: 3px;
+            font-size: 2rem;
+            color: $lightgray;
+
+            &:hover {
+                background: $primary-color;
+                cursor: pointer;
+            }
         }
     }
 }
