@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "homepage": "https://uurtsaikhb.github.io/company",
+    "homepage": "https://uurtsaikhb.github.io/site",
     "scripts": {
         "sass": "node-sass -w scss/ -o dist/css/ --recursive",
         "deploy": "gh-pages -d dist"
